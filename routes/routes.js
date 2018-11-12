@@ -9,4 +9,8 @@ router.get('/tail', (req,res) =>{
 
 
 
+
+/*cancel a specific parcel delivery order*/
+router.put('/parcels/:id/cancel', parcelController.cancelOrder);
+
 export default router;
