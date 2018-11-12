@@ -7,7 +7,6 @@ import logger from 'morgan';
 import path from 'path';
 // import favicon from 'serve-favicon';
 
-// import index from './routes/index.js';
 import routes from './routes/routes';
 
 const app = express();
