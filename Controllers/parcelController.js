@@ -47,7 +47,7 @@ getAllUserParcels(req, res){
 	}
 },
 
-cancelOrder(req,res){
+cancelOrder(req, res){
 const parcel = parcelData.cancelOrder(req.params.id);
 if(!parcel){
   return res.status(404).send({message:'parcel do not exist'});	

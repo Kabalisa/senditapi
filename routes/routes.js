@@ -19,4 +19,7 @@ router.get('/parcels/:id', parcelController.getOne);
 /*cancel a specific parcel delivery order*/
 router.put('/parcels/:id/cancel', parcelController.cancelOrder);
 
+/*create a parcel delivery order the user want*/
+router.post('/parcels', parcelController.create);
+
 export default router;
