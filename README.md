@@ -19,3 +19,4 @@ Following is a list of API Endpoint you will find:
  * fetch all parcel delivery orders by a specific user [sendorder.herokuapp.com/api/v1/users/657384/parcels](https://sendorder.herokuapp.com/api/v1/users/657384/parcels/)
  * cancel the specific parcel delivery order [sendorder.herokuapp.com/api/v1/parcels/2/cancel](https://sendorder.herokuapp.com/api/v1/parcels/2/cancel)
  * create a parcel delivery order [sendorder.herokuapp.com/api/v1/parcels](https://sendorder.herokuapp.com/api/v1/parcels)
+USE POSTMAN for better tests
