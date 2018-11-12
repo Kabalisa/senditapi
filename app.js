@@ -7,7 +7,7 @@ import logger from 'morgan';
 import path from 'path';
 // import favicon from 'serve-favicon';
 
-import index from './routes/index.js';
+// import index from './routes/index.js';
 import routes from './routes/routes';
 
 const app = express();
@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+app.use(express.static(__dirname));
 app.use('/api/v1', routes);
 
 // catch 404 and forward to error handler
