@@ -1,8 +1,8 @@
 
 //function to calculate class
 
-function getPrice(weigth) {
-	return Number(weigth) * 1000;
+function getPrice(weight) {
+	return Number(weight) * 1000;
 }
 
 class Parcel{
@@ -11,7 +11,7 @@ constructor(){
 	this.parcels = [
       {
        id : '1',
-       weigth : '4 kg',
+       weight : '4 kg',
        price : '4000',
        pickup : 'nyamirambo',
        destination : 'remera',
@@ -23,7 +23,7 @@ constructor(){
       
       {
        id : '2',
-       weigth : '2 kg',
+       weight : '2 kg',
        price : '2000',
        pickup : 'byimana',
        destination : 'kabgayi',
@@ -35,7 +35,7 @@ constructor(){
 
       {
        id : '3',
-       weigth : '10 kg',
+       weight : '10 kg',
        price : '10000',
        pickup : 'kanombe',
        destination : 'ruyenzi',
@@ -52,16 +52,17 @@ constructor(){
 
    	const newParcel = {
    		id : cId,
-        weigth : item.weight,
-        price : getPrice(item.weigth),
-        pickup : item.pick,
-        destination : item.take,
-        userId : item.yourId,
-        receivername : item.receiver,
+        weight : item.weight,
+        price : getPrice(item.weight),
+        pickup : item.pickup,
+        destination : item.destination,
+        userId : item.userId,
+        receiver : item.receiver,
         status : 'pending',
-        presentLocation : item.pick,
+        presentLocation : item.pickup,
         };
-        cId +=1;
+
+       cId +=1;
        this.parcels.push(newParcel);
        return newParcel;
    }
