@@ -7,7 +7,7 @@ import logger from 'morgan';
 import path from 'path';
 // import favicon from 'serve-favicon';
 
-import index from './routes/index';
+import index from './routes/index.js';
 import route1 from './routes/route1';
 
 const app = express();
@@ -26,7 +26,7 @@ app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/trail', route1);
+app.use(route1);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
