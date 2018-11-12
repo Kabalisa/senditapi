@@ -22,4 +22,7 @@ router.put('/parcels/:id/cancel', parcelController.cancelOrder);
 /*create a parcel delivery order the user want*/
 router.post('/parcels', parcelController.create);
 
+/*GET all parcels of a specific user*/
+router.get('/users/:id/parcels', parcelController.getAllUserParcels);
+
 export default router;
