@@ -8,7 +8,7 @@ import path from 'path';
 // import favicon from 'serve-favicon';
 
 import index from './routes/index.js';
-import route1 from './routes/route1';
+import routes from './routes/routes';
 
 const app = express();
 const debug = Debug('sendit-api:app');
@@ -26,7 +26,7 @@ app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use(route1);
+app.use('/api/v1', routes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

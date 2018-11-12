@@ -15,7 +15,7 @@ constructor(){
        price : '4000',
        pickup : 'nyamirambo',
        destination : 'remera',
-       userId : '980768'
+       userId : '980768',
        receivername : 'mucyo',
        status : 'pending',
        presentLocation : 'kinamba',
@@ -27,7 +27,7 @@ constructor(){
        price : '2000',
        pickup : 'byimana',
        destination : 'kabgayi',
-       userId : '657384'
+       userId : '657384',
        receivername : 'butati',
        status : 'pending',
        presentLocation : 'mukagi',
@@ -39,7 +39,7 @@ constructor(){
        price : '10000',
        pickup : 'kanombe',
        destination : 'ruyenzi',
-       userId : '989876'
+       userId : '989876',
        receivername : 'eric',
        status : 'pending',
        presentLocation : 'nyabugogo',
@@ -54,10 +54,10 @@ constructor(){
    		id : cId,
         weigth : item.weight,
         price : getPrice(item.weigth),
-        pickup : item.pick;
-        destination : item.take;
-        userId : item.yourId;
-        receivername : item.receiver;
+        pickup : item.pick,
+        destination : item.take,
+        userId : item.yourId,
+        receivername : item.receiver,
         status : 'pending',
         presentLocation : item.pick,
         };
@@ -81,7 +81,7 @@ constructor(){
     return {};
    }
 
-   getAllUserParcel(id){
+   getAllUserParcels(id){
       const userParcels = [];
       this.parcels.forEach((parcel) => {
 
