@@ -8,5 +8,7 @@ router.get('/tail', (req,res) =>{
 });
 
 
+/* GET a specific Parcel delivery order*/
+router.get('/parcels/:id', parcelController.getOne);
 
 export default router;
