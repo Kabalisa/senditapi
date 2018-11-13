@@ -3,7 +3,7 @@ import parcelData from '../Data/parcelData';
 const parcel = {
 
 create(req, res){
-  if(!req.body){
+  if(!req.body.pickup || !req.body.destination || !req.body.weight || !req.body.userId || !req.body.receiver){
   	return res.status(400).send({message: 'complete all fields to proceed'});
   }
   const parcel = parcelData.create(req.body);
