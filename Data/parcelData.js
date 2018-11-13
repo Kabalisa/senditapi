@@ -48,7 +48,7 @@ constructor(){
 }
 
    create(item) {
-   	cId = 4;
+   	var cId = this.parcels[this.parcels.length - 1].id +1;
 
    	const newParcel = {
    		id : cId,
@@ -62,7 +62,6 @@ constructor(){
         presentLocation : item.pickup,
         };
 
-       cId +=1;
        this.parcels.push(newParcel);
        return newParcel;
    }
