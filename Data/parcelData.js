@@ -16,7 +16,7 @@ constructor(){
        pickup : 'nyamirambo',
        destination : 'remera',
        userId : '980768',
-       receivername : 'mucyo',
+       receiver : 'mucyo',
        status : 'pending',
        presentLocation : 'kinamba',
       },
@@ -28,7 +28,7 @@ constructor(){
        pickup : 'byimana',
        destination : 'kabgayi',
        userId : '657384',
-       receivername : 'butati',
+       receiver : 'butati',
        status : 'pending',
        presentLocation : 'mukagi',
       },  
@@ -40,7 +40,7 @@ constructor(){
        pickup : 'kanombe',
        destination : 'ruyenzi',
        userId : '989876',
-       receivername : 'eric',
+       receiver : 'eric',
        status : 'pending',
        presentLocation : 'nyabugogo',
       },   
@@ -48,7 +48,7 @@ constructor(){
 }
 
    create(item) {
-   	var cId = this.parcels[this.parcels.length - 1].id +1;
+   	var cId = this.parcels[this.parcels.length - 1].id + 1;
 
    	const newParcel = {
    		id : cId,
