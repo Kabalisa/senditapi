@@ -48,7 +48,7 @@ constructor(){
 }
 
    create(item) {
-   	var cId = this.parcels[this.parcels.length - 1].id + 1;
+   	var cId = Number.parseInt(this.parcels[this.parcels.length - 1].id) + 1;
 
    	const newParcel = {
    		id : cId,
