@@ -139,5 +139,28 @@ it('should not fetch all parcels for one user', (done) => {
   });
 });
 
+//test the cancel specific order enpoint
+it('should cancel a specified parcel delivery order', (done) => {
+  chai.request(app)
+  .put('/api/v1/parcels/2/cancel')
+  .end((err, res) => {
+    res.should.have.status(200);
+    res.body.should.be.a('object');
+    res.body.should.have.property('status').eql('canceled');
+    done();
+  });
+});
+
+//test when not to cancel a specified parcel
+it('should not cancel a parcel', (done) => {
+  chai.request(app)
+  .put('/api/v1/parcels/33/cancel')
+  .end((err, res) => {
+    res.should.have.status(404);
+    res.body.should.be.a('object');
+    res.body.should.have.property('message').eql('parcel do not exist');
+    done();
+  });
+});
 
 });
