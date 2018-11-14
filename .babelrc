@@ -1,6 +1,6 @@
 {
-  "presets": ["es2015", "stage-0"]
-  "env":{
+  "presets": ["es2015", "stage-0"],
+  "env": {
   "test": {
      "plugin":["istanbul"]
    }
