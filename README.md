@@ -10,6 +10,19 @@ Following is a list of API Endpoint you will find:
 * **PUT/parcels/:parcelid/cancel** cancel the specific parcel delivery order
 * **POST/parcels** create a parcel delivery order
  
+ # Tools:
+ * server-side Framework: **Node/Express**
+ * Linting Library : **Eslint**
+ * Style Guide : **Airbnb**
+ * Testing Framework :**Mocha** or **Jasmine**
+ 
+ # Other Tools:
+ * Travis CI for continous intergration
+ * Babel transpiler for javascript ES6
+ * Istanbul and nyc for test coverage
+ * maintainability badge from codeclimate
+ * Heroku deployment
+ 
  the app's URL on heroku is [sendorder.herokuapp.com](https://sendorder.herokuapp.com/)
  
  following is a list of example routes deployed on heroku:
