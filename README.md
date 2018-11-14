@@ -1,4 +1,4 @@
-# Send-IT API Endpoint [![Build Status](https://travis-ci.org/Kabalisa/senditapi.svg?branch=master)](https://travis-ci.org/Kabalisa/senditapi)
+# Send-IT API Endpoint [![Build Status](https://travis-ci.org/Kabalisa/senditapi.svg?branch=master)](https://travis-ci.org/Kabalisa/senditapi) [![Coverage Status](https://coveralls.io/repos/github/Kabalisa/senditapi/badge.svg)](https://coveralls.io/github/Kabalisa/senditapi)
 Send-IT is a courier service that helps its users to deliver packages wherever they are to whatever destination. Send-IT provides its quotes
 based on weight of the package. 
 
