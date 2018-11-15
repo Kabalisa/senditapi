@@ -76,9 +76,12 @@ constructor(){
    
    delete(id){
     const parcel = this.getOne(id);
+    if(parcel){
     const index = this.parcels.indexOf(parcel);
     this.parcels.splice(index,1); 
-    return {};
+    return {message : 'parcel DELETED'};
+    }
+    return parcel;
    }
 
    getAllUserParcels(id){
