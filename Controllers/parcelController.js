@@ -27,19 +27,17 @@ else{
 },
 
 delete(req, res){
- const parcel = parcelData.getOne(req.params.id);
- if (!parcel){
+ // const parcel = parcelData.getOne(req.params.id);
+const note  = parcelData.delete(req.params.id);
+ if (!note){
  	return res.status(404).send({message: 'parcel do not exist'});
  }
- else{
-   const note  = parcelData.delete(req.params.id);
-   return res.status(201).send(note);
- }
+   return res.status(201).send({message : 'parcel DELETED'});
 },
 
 getAllUserParcels(req, res){
 	const parcels = parcelData.getAllUserParcels(req.params.id);
-	if(!parcels.length){
+	if(parcels.length === 0){
     return res.status(404).send({message: 'user has no parcels'});
 	}
 	else{

@@ -79,9 +79,9 @@ constructor(){
     if(parcel){
     const index = this.parcels.indexOf(parcel);
     this.parcels.splice(index,1); 
-    return {message : 'parcel DELETED'};
+    return true;
     }
-    return parcel;
+    return false;
    }
 
    getAllUserParcels(id){
@@ -95,7 +95,7 @@ constructor(){
       });
 
       if(!userParcels){
-      	return false;
+      	return userParcels;
       }
       else{
       	return userParcels;
