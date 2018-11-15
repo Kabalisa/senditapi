@@ -33,7 +33,7 @@ delete(req, res){
  }
  else{
    const note  = parcelData.delete(req.params.id);
-   return res.status(204).send(note);
+   return res.status(201).send(note);
  }
 },
 

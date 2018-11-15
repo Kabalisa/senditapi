@@ -21,4 +21,7 @@ router.post('/parcels', parcelController.create);
 /*GET all parcels of a specific user*/
 router.get('/users/:id/parcels', parcelController.getAllUserParcels);
 
+/*DELETE a specified parcel delivery order*/
+router.delete('/parcels/:id/delete', parcelController.delete);
+
 export default router;

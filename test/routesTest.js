@@ -139,7 +139,7 @@ it('should not fetch all parcels for one user', (done) => {
   });
 });
 
-//test the cancel specific order enpoint
+//test the cancel specific order endpoint
 it('should cancel a specified parcel delivery order', (done) => {
   chai.request(app)
   .put('/api/v1/parcels/2/cancel')
@@ -163,4 +163,5 @@ it('should not cancel a parcel', (done) => {
   });
 });
 
+//test the delete specific parcel order endpoint
 });
