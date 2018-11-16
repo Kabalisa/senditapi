@@ -33,4 +33,19 @@ Following is a list of API Endpoint you will find:
  * cancel the specific parcel delivery order [sendorder.herokuapp.com/api/v1/parcels/2/cancel](https://sendorder.herokuapp.com/api/v1/parcels/2/cancel)
  * create a parcel delivery order [sendorder.herokuapp.com/api/v1/parcels](https://sendorder.herokuapp.com/api/v1/parcels)
 
-USE POSTMAN for better tests.
+# Installation: 
+**Follow the step below:**
+
+If you do not have node.js and git in your computer, install them first:
+
+* download [node.js](https://nodejs.org/en/download/)
+
+* download [git](https://git-scm.com/downloads)
+
+Clone this project using:
+
+```
+git clone
+```
+
+USE POSTMAN to test requests other than the GET request.
