@@ -45,7 +45,26 @@ If you do not have node.js and git in your computer, install them first:
 Clone this project using:
 
 ```
-git clone
+git clone 
+```
+to install all dependencies required for this project run the below command in your terminal:
+```
+npm install
+```
+to start the server run the below command in your terminal
+```
+npm start
+```
+to run the tests for this project run the below command in your terminal
+```
+npm test
 ```
 
-USE POSTMAN to test requests other than the GET request.
+
+USE **POSTMAN** to test requests other than the GET request.
+
+If POSTMAN is not installed in your computer DOWNLOAD it [here](https://www.getpostman.com/apps)
+
+# Author:
+
+**Kabalisa Innocent Fiston**
