@@ -21,10 +21,10 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(cookieParser());
-app.use(lessMiddleware(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(lessMiddleware(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + '/public'));
 app.use('/api/v1', routes);
 
 // catch 404 and forward to error handler
