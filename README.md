@@ -1,4 +1,4 @@
-# Send-IT API Endpoint [![Build Status](https://travis-ci.org/Kabalisa/senditapi.svg?branch=master)](https://travis-ci.org/Kabalisa/senditapi) [![Coverage Status](https://coveralls.io/repos/github/Kabalisa/senditapi/badge.svg?branch=master)](https://coveralls.io/github/Kabalisa/senditapi?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+# Send-IT API Endpoint [![Build Status](https://travis-ci.org/Kabalisa/senditapi.svg?branch=master)](https://travis-ci.org/Kabalisa/senditapi) [![Coverage Status](https://coveralls.io/repos/github/Kabalisa/senditapi/badge.svg)](https://coveralls.io/github/Kabalisa/senditapi) [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 Send-IT is a courier service that helps its users to deliver packages wherever they are to whatever destination. Send-IT provides its quotes
 based on weight of the package. 
 
@@ -34,4 +34,38 @@ Following is a list of API Endpoint you will find:
  * create a parcel delivery order [sendorder.herokuapp.com/api/v1/parcels](https://sendorder.herokuapp.com/api/v1/parcels)
 
 
-USE POSTMAN for better tests.
+# Installation: 
+**Follow the step below:**
+
+If you do not have node.js and git in your computer, install them first:
+
+* download [node.js](https://nodejs.org/en/download/)
+
+* download [git](https://git-scm.com/downloads)
+
+Clone this project using:
+
+```
+git clone 
+```
+to install all dependencies required for this project run the below command in your terminal:
+```
+npm install
+```
+to start the server run the below command in your terminal
+```
+npm start
+```
+to run the tests for this project run the below command in your terminal
+```
+npm test
+```
+
+
+USE **POSTMAN** to test requests other than the GET request.
+
+If POSTMAN is not installed in your computer DOWNLOAD it [here](https://www.getpostman.com/apps)
+
+# Author:
+
+**Kabalisa Innocent Fiston**
