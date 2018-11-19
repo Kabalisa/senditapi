@@ -94,7 +94,7 @@ constructor(){
 
       });
 
-      if(!userParcels){
+      if(userParcels.length === 0){
       	return userParcels;
       }
       else{
@@ -111,6 +111,21 @@ constructor(){
      return this.parcels[index];
      }
    return parcel;
+   }
+
+   updateOrder(id, item){
+    const parcel = this.getOne(id);
+    if(parcel){
+      const index = this.parcels.indexOf(parcel);
+      this.parcels[index].weight = item.weight;
+      this.parcels[index].price = getPrice(item.weight);
+      this.parcels[index].pickup = item.pickup;
+      this.parcels[index].destination = item.destination;
+      this.parcels[index].receiver = item.receiver;
+      this.parcels[index].presentLocation = item.pickup;
+      return this.parcels[index];
+    }
+    return parcel;
    }
 
 }

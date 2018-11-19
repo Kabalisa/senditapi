@@ -53,6 +53,20 @@ if(!parcel){
 else{
 	return res.status(200).send(parcel);
 }
+},
+
+updateOrder(req, res){
+if(req.body.weight =="" && req.body.pickup == "" && req.body.destination == "" && req.body.receiver == ""){
+  return res.status(404).send({message:'nothing updated'});
+}
+
+const updated = parcelData.updateOrder(req.params.id, req.body);
+
+if(!updated){
+  return res.status(404).send({message:'parcel do not exist'});
+}
+
+return res.status(200).send(updated);
 
 }
 
