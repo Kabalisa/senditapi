@@ -3,7 +3,7 @@ import parcelData from '../Data/parcelData';
 const parcel = {
 
 create(req, res){
-  if(!req.body.pickup || !req.body.destination || !req.body.weight || !req.body.userId || !req.body.receiver){
+  if(!req.body.pickup_StNo || !req.body.pickup || !req.body.destination_StNo || !req.body.destination || !req.body.weight || !req.body.userId || !req.body.receiver || !req.body.receiver_phone){
   	return res.status(400).send({message: 'complete all fields to proceed'});
   }
   const parcel = parcelData.create(req.body);
@@ -56,7 +56,7 @@ else{
 },
 
 updateOrder(req, res){
-if(req.body.weight =="" && req.body.pickup == "" && req.body.destination == "" && req.body.receiver == ""){
+if(req.body.weight =="" && req.body.pickup == "" && req.body.pickup_StNo == "" && req.body.destination == "" && req.body.destination_StNo == "" && req.body.receiver == "" && req.body.receiver_phone == ""){
   return res.status(404).send({message:'nothing updated'});
 }
 

@@ -13,36 +13,45 @@ constructor(){
        id : '1',
        weight : '4 kg',
        price : '4000',
+       pickup_StNo: 'KN 245 St',
        pickup : 'nyamirambo',
+       destination_StNo: 'KN 478 St',
        destination : 'remera',
        userId : '980768',
        receiver : 'mucyo',
+       receiver_phone: '0788465633',
        status : 'pending',
-       presentLocation : 'kinamba',
+       presentLocation : 'kinamba'
       },
       
       {
        id : '2',
        weight : '2 kg',
        price : '2000',
+       pickup_StNo: 'KN 345 St',
        pickup : 'byimana',
+       destination_StNo: 'KN 244 St',
        destination : 'kabgayi',
        userId : '657384',
        receiver : 'butati',
+       receiver_phone: '0734554434',
        status : 'pending',
-       presentLocation : 'mukagi',
+       presentLocation : 'mukagi'
       },  
 
       {
        id : '3',
        weight : '10 kg',
        price : '10000',
+       pickup_StNo: 'KN 445 St',
        pickup : 'kanombe',
+       destination_StNo: 'KN 342 St',
        destination : 'ruyenzi',
        userId : '989876',
        receiver : 'eric',
+       receiver_phone: '0784663212',
        status : 'pending',
-       presentLocation : 'nyabugogo',
+       presentLocation : 'nyabugogo'
       },   
      ];
 }
@@ -54,10 +63,13 @@ constructor(){
    		id : cId,
         weight : item.weight,
         price : getPrice(item.weight),
+        pickup_StNo : item.pickup_StNo,
         pickup : item.pickup,
+        destination_StNo : item.destination_StNo,
         destination : item.destination,
         userId : item.userId,
         receiver : item.receiver,
+        receiver_phone : item.receiver_phone,
         status : 'pending',
         presentLocation : item.pickup,
         };
@@ -119,9 +131,12 @@ constructor(){
       const index = this.parcels.indexOf(parcel);
       this.parcels[index].weight = item.weight;
       this.parcels[index].price = getPrice(item.weight);
+      this.parcels[index].pickup_StNo = item.pickup_StNo;
       this.parcels[index].pickup = item.pickup;
+      this.parcels[index].destination_StNo = item.destination_StNo;
       this.parcels[index].destination = item.destination;
       this.parcels[index].receiver = item.receiver;
+      this.parcels[index].receiver_phone = item.receiver_phone;
       this.parcels[index].presentLocation = item.pickup;
       return this.parcels[index];
     }

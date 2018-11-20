@@ -41,11 +41,14 @@ it('should FETCH all parcels', (done) => {
 //test the create parcel endpoint
 it('should create a parcel delivery order', (done) =>{
     const item = {
+       pickup_StNo : 'KN 334 St',      
        pickup : 'kirehe',
+       destination_StNo : 'KN 322 St',
        destination : 'bugesera',
        weight : '5',
        userId : '222000',
-       receiver : 'peruth'
+       receiver : 'peruth',
+       receiver_phone : '0789765432'
     };
     chai.request(app)
     .post('/api/v1/parcels')
@@ -57,9 +60,12 @@ it('should create a parcel delivery order', (done) =>{
       res.body.should.have.property('weight').eql('5');
       res.body.should.have.property('price').eql(5000);
       res.body.should.have.property('pickup').eql('kirehe');
+      res.body.should.have.property('pickup_StNo').eql('KN 334 St');
       res.body.should.have.property('destination').eql('bugesera');
-      res.body.should.have.property('userId').eql('222000');
+      res.body.should.have.property('destination_StNo').eql('KN 322 St');
+      res.body.should.have.property('userId');
       res.body.should.have.property('receiver').eql('peruth');
+      res.body.should.have.property('receiver_phone').eql('0789765432');
       res.body.should.have.property('status').eql('pending');
       res.body.should.have.property('presentLocation').eql('kirehe');
       done();
@@ -94,9 +100,12 @@ it('should FETCH one specific parcel', (done) => {
    res.body.should.have.property('weight').eql('4 kg');
    res.body.should.have.property('price').eql('4000');
    res.body.should.have.property('pickup').eql('nyamirambo');
+   res.body.should.have.property('pickup_StNo').eql('KN 245 St');
    res.body.should.have.property('destination').eql('remera');
+   res.body.should.have.property('destination_StNo').eql('KN 478 St');
    res.body.should.have.property('userId').eql('980768');
    res.body.should.have.property('receiver').eql('mucyo');
+   res.body.should.have.property('receiver_phone').eql('0788465633');
    res.body.should.have.property('status').eql('pending');
    res.body.should.have.property('presentLocation').eql('kinamba');
    done();
@@ -190,10 +199,13 @@ it('should not delete a parcel', (done) => {
 //test when to update a specific parcel
 it('should update a specific parcel delivery order', (done) => {
   const item = {
+       pickup_StNo : 'KN 332 St',
        pickup : 'kayonza',
+       destination_StNo : 'KN 003 St',
        destination : 'kigali',
        weight : '50',
-       receiver : 'krichof'
+       receiver : 'krichof',
+       receiver_phone : '0788364536'
     };
 chai.request(app)
 .put('/api/v1/parcels/1/update')
@@ -204,11 +216,14 @@ chai.request(app)
   res.body.should.have.property('id').eql('1');
   res.body.should.have.property('weight').eql('50');
   res.body.should.have.property('price').eql(50000);
+  res.body.should.have.property('pickup_StNo').eql('KN 332 St');
   res.body.should.have.property('pickup').eql('kayonza');
+  res.body.should.have.property('destination_StNo').eql('KN 003 St');
   res.body.should.have.property('destination').eql('kigali');
   res.body.should.have.property('userId').eql('980768');
   res.body.should.have.property('status').eql('pending');
   res.body.should.have.property('receiver').eql('krichof');
+  res.body.should.have.property('receiver_phone').eql('0788364536');
   res.body.should.have.property('presentLocation').eql('kayonza');
   done();
 });
@@ -229,10 +244,13 @@ done();
 //test when to update a specific parcel
 it('should update a specific parcel delivery order', (done) => {
   const item = {
+       pickup_StNo : '',
        pickup : '',
+       destination_StNo : '',
        destination : '',
        weight : '',
-       receiver : ''
+       receiver : '',
+       receiver_phone :''
     };
 chai.request(app)
 .put('/api/v1/parcels/1/update')
