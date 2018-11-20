@@ -60,7 +60,10 @@ to run the tests for this project run the below command in your terminal
 ```
 npm test
 ```
+<<<<<<< HEAD
 
+=======
+>>>>>>> 517ed386e80e169984672be518b92969af00e29b
 # Table of Endpoints
 Method | Endpoint | Action 
 ------ | -------- | ------
