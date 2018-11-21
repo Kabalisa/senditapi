@@ -1,16 +1,16 @@
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
-import Debug from 'debug';
 import express from 'express';
-import lessMiddleware from 'less-middleware';
 import logger from 'morgan';
-import path from 'path';
 // import favicon from 'serve-favicon';
 
 import routes from './routes/routes';
 
 const app = express();
-const debug = Debug('sendit-api:app');
+
+app.listen(3000, () =>{ 
+  console.log('API running now');
+  });
 
 // uncomment after placing your favicon in /public
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -21,8 +21,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(cookieParser());
-// app.use(lessMiddleware(path.join(__dirname, 'public')));
-// app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.static(__dirname + '/public'));
 app.use('/api/v1', routes);
@@ -43,12 +41,6 @@ app.use((err, req, res, next) => {
   // render the error page
   res.status(err.status || 500);
   res.json(err);
-});
-
-// Handle uncaughtException
-process.on('uncaughtException', (err) => {
-  debug('Caught exception: %j', err);
-  process.exit(1);
 });
 
 export default app;
