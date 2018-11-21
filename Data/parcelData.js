@@ -31,7 +31,7 @@ constructor(){
        pickup_StNo: 'KN 345 St',
        pickup : 'byimana',
        destination_StNo: 'KN 244 St',
-       destination : 'kabgayi',
+       destination : 'nkoto',
        userId : '657384',
        receiver : 'butati',
        receiver_phone: '0734554434',
