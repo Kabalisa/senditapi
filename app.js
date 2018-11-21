@@ -8,7 +8,9 @@ import routes from './routes/routes';
 
 const app = express();
 
-app.listen(3000, () =>{ 
+const port = process.env.PORT || 3000; 
+
+app.listen(port, () =>{ 
   console.log('API running now');
   });
 
